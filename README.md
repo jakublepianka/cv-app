@@ -1,1 +1,2 @@
-# cv-app
+# React + Vite
+# CV App
