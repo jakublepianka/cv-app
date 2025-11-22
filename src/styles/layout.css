@@ -1,0 +1,87 @@
+/*
+  palette ////
+  background-color: #e5fbff;
+  background-color: #ccf6ff;
+  background-color: #99eeff;
+  background-color: #66e5ff;
+  background-color: #33ddff;
+  background-color: #00d4ff;
+  background-color: #00aacc;
+  background-color: #007f99;
+  background-color: #005566;
+  background-color: #002a33;
+  background-color: #001e24;
+  background-color: #171717;
+*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/InterVariable.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+  font-family: 'Inter', sans-serif;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+#root {
+  background-color: #ccf6ff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+button {
+  border: none;
+  background-color: #00d4ff;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+header {
+  display: grid;
+  z-index: 4;
+  background-color: #414141;
+}
+
+.header-buttons-container {
+  display: flex;
+}
+
+.header-buttons-container>button {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  transition:
+    color 150ms ease-in,
+    background-color 150ms ease-in;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  height: calc(100vh - 42.4px);
+  overflow: hidden;
+}

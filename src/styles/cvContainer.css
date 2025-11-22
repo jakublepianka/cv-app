@@ -1,0 +1,97 @@
+.cv-container {
+  background-color: #FFF;
+  display: none;
+  column-gap: inherit;
+  box-sizing: border-box;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+.cv-subcontainer {
+  width: 100%;
+  max-width: 771px;
+  margin: 0 auto;
+}
+
+.placeholder-text {
+  padding: 32px 0;
+}
+
+.cv-subcontainer section[data-sectionid="0"] {
+  padding-left: 40px;
+}
+
+.cv-subcontainer section:hover {
+  backdrop-filter: blur(5px);
+}
+
+.cv-subcontainer section h1:hover {
+  cursor: pointer;
+}
+
+.cv-subcontainer .cv-section-subcontainer {
+  display: flex;
+}
+
+.drag-handle {
+  position: relative;
+  touch-action: none;
+  text-align: center;
+  width: 40px;
+  height: 100%;
+
+  background-color: transparent;
+  padding: 3px 5px 3px 8px;
+  color: #171717;
+}
+
+.drag-handle::after {
+  content: ":::";
+  position: absolute;
+  left: 7px;
+  transform: rotate(90deg);
+  letter-spacing: 4px;
+  text-indent: 4px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 0px;
+  border-radius: 4px;
+}
+
+.section-content-container {
+  flex: 1;
+  padding: 16px 8px 0px 8px;
+}
+
+.cv-entry {
+  padding-bottom: 16px;
+}
+
+.cv-entry>* {
+  padding-top: 8px;
+}
+
+.language-container .cv-entry:not(:last-child),
+.skill-container .cv-entry:not(:last-child),
+.link-container .cv-entry:not(:last-child) {
+  padding-bottom: 4px;
+}
+
+.cv-subcontainer h1 {
+  text-align: center;
+  padding: 0 8px 8px;
+  border-bottom: 4px solid #33ddff;
+  margin-bottom: 4px;
+}
+
+.placeholder-text>h1 {
+  border-bottom: none;
+}
+
+.cv-entry h2 {
+  font-size: 22px;
+}
+
+p {
+  word-break: normal;
+}
