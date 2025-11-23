@@ -1,5 +1,6 @@
 # CV App
 
+[Live Demo](https://c-v-builder.netlify.app/)
 Interactive resume/CV builder built with React that allows users to create, edit, and preview their curriculum vitae with drag-and-drop section reordering.
 
 ## Features
