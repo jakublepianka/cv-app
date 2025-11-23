@@ -33,34 +33,38 @@ export function CvPreview({
   onGoTo,
   activeId,
 }) {
-  function isEmpty(objArr) {
-    let isEmpty = true;
-    objArr.forEach((obj) => {
-      let keys = Object.keys(obj);
-      isEmpty = keys.every((key) => {
-        if (
-          key === "key" ||
-          key === "isCurrent" ||
-          (obj[key] === "none" && key === "level")
-        )
-          return true;
-        if (obj[key] !== "") {
-          return false;
-        }
-        return true;
-      });
-    });
-    return isEmpty;
+  function isArrEmpty(objArr) {
+    for (const obj of objArr ) {
+      if (!isObjEmpty(obj)) return false;
+    }
+    return true;
   }
+
+  function isObjEmpty(obj) {
+    let keys = Object.keys(obj);
+    return keys.every((key) => {
+      if (
+        key === "key" ||
+        key === "isCurrent" ||
+        (obj[key] === "none" && key === "level")
+      )
+        return true;
+      if (obj[key] !== "") {
+        return false;
+      }
+      return true;
+    });
+  }
+
   function isAllEmpty(inputData) {
     for (const obj of inputData) {
-      if (!isEmpty(obj.sectionCards)) return false;
+      if (!isArrEmpty(obj.sectionCards)) return false;
     }
     return true;
   }
 
   const visibleSectionIds = sectionOrder.filter(
-    (sectionIndex) => !isEmpty(inputData[sectionIndex].sectionCards)
+    (sectionIndex) => !isArrEmpty(inputData[sectionIndex].sectionCards)
   );
 
   const fullPreviewStyles = isEdit
