@@ -1,8 +1,7 @@
 .input-field-normal {
-  flex: 1 1 220px;
+  flex: 1 1 272px;
   position: relative;
   min-width: minmax(100%, 462px);
-  max-width: 462px;
   min-height: 44px;
   max-height: 44px;
   margin: 0 auto;
@@ -43,7 +42,6 @@ select:focus-visible {
     opacity 150ms ease-in,
     transform 150ms ease-in,
     font-size 150ms ease-in;
-
 }
 
 input:focus~label,
@@ -73,12 +71,11 @@ option {
  */
 
 .date-inputs {
-  flex: 1 1 220px;
+  flex: 1 1 272px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
   min-width: minmax(100%, 462px);
-  max-width: 462px;
   gap: 8px;
   margin: auto;
 }
@@ -98,7 +95,6 @@ option {
 
 .date-inputs>.input-field-normal {
   width: 100%;
-  max-width: 227px;
 }
 
 /* 
