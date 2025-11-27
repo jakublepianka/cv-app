@@ -63,6 +63,10 @@
     padding: 16px 32px;
   }
 
+  .input-container-shown {
+    padding: 36px 32px;
+  }
+
   .editor-nav-buttons {
     margin-bottom: 1vw;
   }
