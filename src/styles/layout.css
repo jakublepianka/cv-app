@@ -81,5 +81,6 @@ header {
 main {
   display: grid;
   grid-template-columns: repeat(20, 1fr);
+  height: 100%;
   overflow: hidden;
 }
